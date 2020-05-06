@@ -1,6 +1,8 @@
 # 2019 카카오 개발자 겨울 인턴십
 # 호텔 방 배정
-# 정확성: 78.8 , 효율성: 18.2, 합계 97.0/100
+
+import sys
+sys.setrecursionlimit(1500)
 
 def empty(x, rooms):
     if x not in rooms:
