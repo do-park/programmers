@@ -1,0 +1,4 @@
+# 코딩테스트 연습 > SELECT > 모든 레코드 조회
+
+SELECT * FROM ANIMAL_INS
+ORDER BY ANIMAL_ID ASC
