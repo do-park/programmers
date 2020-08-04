@@ -105,3 +105,18 @@
   ```
 
 - 
+
+
+
+### 코딩테스트 연습 > GROUP BY
+
+- 고양이와 개는 몇 마리 있을까
+
+  ```sqlite
+  SELECT ANIMAL_TYPE, COUNT(*)
+  FROM ANIMAL_INS
+  GROUP BY ANIMAL_TYPE
+  ORDER BY ANIMAL_TYPE 
+  ```
+
+  
