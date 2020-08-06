@@ -76,6 +76,12 @@
   SELECT COUNT (*) FROM ANIMAL_INS
   ```
 
+- 중복 제거하기
+
+  ```MYSQL
+  SELECT COUNT(DISTINCT NAME) FROM ANIMAL_INS
+  ```
+
 - 
 
 
@@ -117,6 +123,31 @@
   FROM ANIMAL_INS
   GROUP BY ANIMAL_TYPE
   ORDER BY ANIMAL_TYPE 
+  ```
+
+- 입양 시각 구하기(1)
+
+  ```mysql
+  SELECT HOUR(DATETIME) HOUR, COUNT(DATETIME) COUNT
+  FROM ANIMAL_OUTS
+  GROUP BY HOUR(DATETIME)
+  HAVING HOUR >= 9 and HOUR <= 19
+  ORDER BY HOUR ASC
+  ```
+
+- 
+
+
+
+### 코딩테스트 연습 > Summer/Winter Coding(2019)
+
+-  우유와 요거트가 담긴 장바구니
+
+  ```mysql
+  SELECT DISTINCT A.CART_ID FROM 
+   (SELECT CART_ID FROM CART_PRODUCTS WHERE NAME = 'Yogurt') as A, 
+   (SELECT CART_ID FROM CART_PRODUCTS WHERE NAME = 'Milk') as B
+   WHERE A.CART_ID = B.CART_ID
   ```
 
   
