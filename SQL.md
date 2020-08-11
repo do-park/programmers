@@ -135,6 +135,16 @@
   ORDER BY HOUR ASC
   ```
 
+- 동명 동물 수 찾기
+
+  ```sqlite
+  SELECT NAME, COUNT(*)
+  FROM ANIMAL_INS
+  GROUP BY NAME
+  HAVING COUNT(NAME) >= 2
+  ORDER BY NAME
+  ```
+
 - 
 
 
@@ -150,4 +160,20 @@
    WHERE A.CART_ID = B.CART_ID
   ```
 
-  
+-  
+
+
+
+### 코딩테스트 연습 > String, Date 
+
+- 이름에 el이 들어가는 동물 찾기
+
+  ```sqlite
+  SELECT ANIMAL_ID, NAME
+  FROM ANIMAL_INS
+  WHERE NAME LIKE '%EL%' AND ANIMAL_TYPE = 'Dog' 
+  ORDER BY NAME
+  ```
+
+- 
+
