@@ -175,5 +175,28 @@
   ORDER BY NAME
   ```
 
-- 
+- 루시와 엘라 찾기
 
+  ```MYSQL
+  SELECT ANIMAL_ID, NAME, SEX_UPON_INTAKE
+  FROM ANIMAL_INS
+  WHERE NAME IN ('Lucy', 'Ella', 'Pickle', 'Rogan', 'Sabrina', 'Mitty')
+  ```
+
+- 중성화 여부 파악하기
+
+  ```mysql
+  SELECT ANIMAL_ID, NAME, 
+  IF (SUBSTRING(SEX_UPON_INTAKE, 1, 8) = 'Neutered'
+     OR SUBSTRING(SEX_UPON_INTAKE, 1, 6) = 'Spayed', 'O', 'X') AS 중성화
+  FROM ANIMAL_INS
+  ORDER BY ANIMAL_ID
+  ```
+
+- ```MYSQL
+  SELECT ANIMAL_ID, NAME, DATE_FORMAT(DATETIME, '%Y-%m-%d') AS 날짜
+  FROM ANIMAL_INS
+  ORDER BY ANIMAL_ID
+  ```
+
+- 
