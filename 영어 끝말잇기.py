@@ -1,9 +1,10 @@
+# 코딩테스트 연습 > Summer/Winter Coding(~2018) > 영어 끝말잇기
+
 def solution(n, words):
     cnt = len(words)
     done = {words[0]}
     for turn in range(1, cnt):
         if words[turn] in done:
-            # return 번호, 차례
             return [turn % n + 1, turn // n + 1]
         if words[turn - 1][-1] != words[turn][0]:
             return [turn % n + 1, turn // n + 1]
